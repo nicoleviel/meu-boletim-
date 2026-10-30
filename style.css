@@ -1,12 +1,12 @@
 /* Configurações gerais e cores do projeto */
 :root {
-  --cor-fundo: #f4f7f9;
-  --cor-texto: #1e293b;
-  --cor-principal: #0f172a; /* Azul bem escuro */
-  --cor-secundaria: #0284c7; /* Azul claro / vibrante */
-  --cor-card-bg: #ffffff;
-  --borda-fina: 1px solid #e2e8f0;
-  --borda-grossa: 3px solid #0f172a;
+  --cor-fundo: #4169e1; /* Azul Royal */
+  --cor-texto: #ffffff;
+  --cor-principal: #ffffff;
+  --cor-secundaria: #e0e7ff;
+  --cor-card-bg: rgba(15, 23, 42, 0.85); /* Fundo dos cards escuro para ter contraste */
+  --borda-fina: 1px solid rgba(255, 255, 255, 0.2);
+  --borda-grossa: 3px solid #38bdf8;
 }
 
 * {
@@ -35,9 +35,17 @@ body {
   padding-left: 12px;
 }
 
+/* Título estilo "Boletim" com fonte cursiva e efeito de brilho/glitter em volta */
 .header h1 {
-  color: var(--cor-principal);
-  font-size: 1.8rem;
+  font-family: 'Brush Script MT', 'Comic Sans MS', cursive, sans-serif;
+  font-size: 3.5rem;
+  color: #ffffff;
+  /* Efeito de brilho em volta do texto */
+  text-shadow: 
+    0 0 5px #ffffff,
+    0 0 10px #38bdf8,
+    0 0 20px #38bdf8,
+    0 0 30px #93c5fd;
 }
 
 .subtitulo {
@@ -59,8 +67,7 @@ body {
   padding: 16px;
   border-radius: 8px;
   border: var(--borda-fina);
-  /* Sombra bem leve como você pediu */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .card-destaque {
@@ -69,7 +76,7 @@ body {
 
 .card h3 {
   font-size: 0.85rem;
-  color: #64748b;
+  color: #94a3b8;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
@@ -78,13 +85,13 @@ body {
 .card p {
   font-size: 1.6rem;
   font-weight: bold;
-  color: var(--cor-principal);
+  color: #ffffff;
 }
 
 .legenda-frequencia {
   display: block;
   font-size: 0.75rem;
-  color: var(--cor-secundaria);
+  color: #38bdf8;
   margin-top: 4px;
 }
 
@@ -93,8 +100,8 @@ body {
   background-color: var(--cor-card-bg);
   border-radius: 8px;
   border: var(--borda-fina);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  overflow-x: auto; /* Permite rolar em telas pequenas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  overflow-x: auto;
 }
 
 table {
@@ -105,10 +112,10 @@ table {
 }
 
 th {
-  background-color: #f8fafc;
-  color: var(--cor-principal);
+  background-color: rgba(30, 41, 59, 0.9);
+  color: #ffffff;
   padding: 12px 16px;
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   font-weight: 600;
 }
 
@@ -123,16 +130,16 @@ tr:last-child td {
 
 /* Estilos para Situação */
 .situacao-bom {
-  color: #16a34a;
+  color: #4ade80;
   font-weight: 600;
 }
 
 .situacao-atencao {
-  color: #dc2626;
+  color: #f87171;
   font-weight: 600;
 }
 
 .situacao-indisponivel {
-  color: #64748b;
+  color: #94a3b8;
   font-style: italic;
 }
