@@ -1,0 +1,138 @@
+/* Configurações gerais e cores do projeto */
+:root {
+  --cor-fundo: #f4f7f9;
+  --cor-texto: #1e293b;
+  --cor-principal: #0f172a; /* Azul bem escuro */
+  --cor-secundaria: #0284c7; /* Azul claro / vibrante */
+  --cor-card-bg: #ffffff;
+  --borda-fina: 1px solid #e2e8f0;
+  --borda-grossa: 3px solid #0f172a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  padding: 20px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+.header {
+  margin-bottom: 24px;
+  border-left: var(--borda-grossa);
+  padding-left: 12px;
+}
+
+.header h1 {
+  color: var(--cor-principal);
+  font-size: 1.8rem;
+}
+
+.subtitulo {
+  color: var(--cor-secundaria);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Grid de Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: var(--cor-card-bg);
+  padding: 16px;
+  border-radius: 8px;
+  border: var(--borda-fina);
+  /* Sombra bem leve como você pediu */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.card-destaque {
+  border-top: var(--borda-grossa);
+}
+
+.card h3 {
+  font-size: 0.85rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--cor-principal);
+}
+
+.legenda-frequencia {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--cor-secundaria);
+  margin-top: 4px;
+}
+
+/* Tabela Responsiva */
+.tabela-container {
+  background-color: var(--cor-card-bg);
+  border-radius: 8px;
+  border: var(--borda-fina);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  overflow-x: auto; /* Permite rolar em telas pequenas */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: #f8fafc;
+  color: var(--cor-principal);
+  padding: 12px 16px;
+  border-bottom: 2px solid #e2e8f0;
+  font-weight: 600;
+}
+
+td {
+  padding: 12px 16px;
+  border-bottom: var(--borda-fina);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Estilos para Situação */
+.situacao-bom {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.situacao-atencao {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.situacao-indisponivel {
+  color: #64748b;
+  font-style: italic;
+}
