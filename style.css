@@ -1,4 +1,4 @@
-/* Configurações gerais e cores do projeto */
+/* Configurações gerais e cores do projeto /* Configurações gerais e cores do projeto */
 :root {
   --cor-fundo: #4169e1; /* Azul Royal */
   --cor-texto: #ffffff;
@@ -18,6 +18,13 @@
 
 body {
   background-color: var(--cor-fundo);
+  /* Fundo decorativo com silhueta suave de galhos brancos */
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.08) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.08) 75%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.08) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.08) 75%);
+  background-size: 60px 60px, 80px 80px, 100px 100px, 100px 100px;
   color: var(--cor-texto);
   padding: 20px;
   line-height: 1.5;
@@ -28,30 +35,32 @@ body {
   margin: 0 auto;
 }
 
-/* Cabeçalho */
+/* Cabeçalho centralizado */
 .header {
-  margin-bottom: 24px;
-  border-left: var(--borda-grossa);
-  padding-left: 12px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 10px 0;
 }
 
-/* Título estilo "Boletim" com fonte cursiva e efeito de brilho/glitter em volta */
+/* Título "Boletim" no meio, com fonte elegante e efeito de glitter */
 .header h1 {
-  font-family: 'Brush Script MT', 'Comic Sans MS', cursive, sans-serif;
-  font-size: 3.5rem;
+  font-family: 'Dancing Script', 'Brush Script MT', 'Great Vibes', cursive;
+  font-size: 4rem;
   color: #ffffff;
-  /* Efeito de brilho em volta do texto */
+  margin-bottom: 4px;
+  /* Efeito de brilho/glitter em volta do texto */
   text-shadow: 
     0 0 5px #ffffff,
     0 0 10px #38bdf8,
     0 0 20px #38bdf8,
-    0 0 30px #93c5fd;
+    0 0 35px #93c5fd,
+    0 0 45px #ffffff;
 }
 
 .subtitulo {
   color: var(--cor-secundaria);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 /* Grid de Cards */
