@@ -68,4 +68,106 @@
   <!-- Script JavaScript -->
   <script src="script.js"></script>
 </body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boletim Digital - 9º Ano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Cabeçalho do Boletim -->
+    <header class="header">
+      <h1>Boletim</h1>
+      <p class="subtitulo">9º Ano — Turma 9B — Chamada nº 28</p>
+    </header>
+
+    <!-- Área de Acesso por PIN -->
+    <section id="area-login" class="card card-login">
+      <h3>Acesso ao Boletim</h3>
+      <p class="info-aluno">Turma: <strong>9B</strong> | Chamada: <strong>28</strong></p>
+      <div class="form-grupo">
+        <label for="input-pin">Digite seu PIN:</label>
+        <input type="password" id="input-pin" placeholder="****" maxlength="10">
+        <button id="btn-entrar">Entrar</button>
+      </div>
+      <p id="msg-login" class="mensagem-status"></p>
+    </section>
+
+    <!-- Conteúdo do Boletim (Escondido antes do Login) -->
+    <main id="conteudo-boletim" style="display: none;">
+      <!-- Barra de Ações -->
+      <div class="acoes-bar">
+        <button id="btn-alterar-dados">Alterar dados</button>
+      </div>
+
+      <!-- Área de Cards de Resumo -->
+      <section class="cards-grid">
+        <div class="card card-destaque">
+          <h3>Média Geral</h3>
+          <p id="card-media">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Total de Faltas</h3>
+          <p id="card-faltas">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Bom Desempenho</h3>
+          <p id="card-bom-desempenho">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Precisa de Atenção</h3>
+          <p id="card-atencao">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Frequência</h3>
+          <p id="card-frequencia">92%</p>
+          <span class="legenda-frequencia">Frequência adequada</span>
+        </div>
+      </section>
+
+      <!-- Painel de Edição de Dados -->
+      <section id="area-edicao" class="card card-edicao" style="display: none;">
+        <h3>Editar Notas e Faltas</h3>
+        <p class="instrucoes-edicao">Notas: 0 a 10 (ponto ou vírgula). Faltas: números inteiros (0 ou mais).</p>
+        <div id="container-edicao-disciplinas"></div>
+        <div class="botoes-edicao">
+          <button id="btn-salvar-dados">Salvar alterações</button>
+          <button id="btn-cancelar-edicao" class="btn-secundario">Cancelar</button>
+        </div>
+        <p id="msg-salvar" class="mensagem-status"></p>
+      </section>
+
+      <!-- Tabela de Disciplinas -->
+      <section class="tabela-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Disciplina</th>
+              <th>1º Tri</th>
+              <th>2º Tri</th>
+              <th>3º Tri</th>
+              <th>Média</th>
+              <th>Faltas</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-corpo">
+            <!-- O JavaScript vai preencher as linhas da tabela aqui -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Script JavaScript -->
+  <script src="script.js"></script>
+</body>
 </html>

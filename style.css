@@ -1,4 +1,4 @@
-/* Configurações gerais e cores do projeto /* Configurações gerais e cores do projeto */
+/* Configurações gerais e cores do projeto */
 :root {
   --cor-fundo: #4169e1; /* Azul Royal */
   --cor-texto: #ffffff;
@@ -151,4 +151,139 @@ tr:last-child td {
 .situacao-indisponivel {
   color: #94a3b8;
   font-style: italic;
+}
+
+/* --- ESTILOS ADICIONAIS DA ETAPA 2 --- */
+
+/* Card de Login por PIN */
+.card-login {
+  max-width: 400px;
+  margin: 20px auto 40px auto;
+  text-align: center;
+}
+
+.info-aluno {
+  margin: 10px 0;
+  color: var(--cor-secundaria);
+  font-size: 0.95rem;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.form-grupo label {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.form-grupo input {
+  padding: 10px;
+  border-radius: 6px;
+  border: var(--borda-fina);
+  background-color: rgba(15, 23, 42, 0.6);
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-align: center;
+  outline: none;
+}
+
+.form-grupo input:focus {
+  border-color: #38bdf8;
+}
+
+button {
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0369a1;
+}
+
+.btn-secundario {
+  background-color: #475569;
+}
+
+.btn-secundario:hover {
+  background-color: #334155;
+}
+
+.acoes-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+/* Área de Edição */
+.card-edicao {
+  margin-bottom: 30px;
+}
+
+.instrucoes-edicao {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 15px;
+}
+
+.linha-edicao {
+  display: grid;
+  grid-template-columns: 2fr repeat(6, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: var(--borda-fina);
+}
+
+.linha-edicao span {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.linha-edicao input {
+  padding: 6px;
+  border-radius: 4px;
+  border: var(--borda-fina);
+  background-color: rgba(15, 23, 42, 0.6);
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.linha-edicao input.campo-invalido {
+  border: 2px solid #f87171;
+  background-color: rgba(220, 38, 38, 0.2);
+}
+
+.botoes-edicao {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.mensagem-status {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.mensagem-status.erro {
+  color: #f87171;
+}
+
+.mensagem-status.sucesso {
+  color: #4ade80;
+}
+
+.mensagem-status.info {
+  color: #38bdf8;
 }
